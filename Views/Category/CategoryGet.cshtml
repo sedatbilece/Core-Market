@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Category Index";
+    Layout = "_Layout";
+}
+
+@model CoreAndFood.Data.Models.Category
+
+
+<div>
+    category get
+
+    @using (Html.BeginForm("CategoryUpdate", "Category", FormMethod.Post))
+    {
+        <span>categori ad:</span>
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+
+        <span>categori acıklama:</span>
+        @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" })
+
+        <button class="btn btn-primary" href="" type="submit">update</button>
+    }
+
+
+</div>

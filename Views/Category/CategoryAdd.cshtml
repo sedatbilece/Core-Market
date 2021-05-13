@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Category ekle";
+    Layout = "_Layout";
+}
+@model CoreAndFood.Data.Models.Category
+
+<div>
+    <h2>category ekleme sayfası</h2>
+    <hr />
+    <br />
+
+    @*
+        form daki inputların name leri oluşturulan modeldeki nesne adları ile aynı olmalı ve 
+        input classlarında form-control olmalı
+    
+        
+        
+        
+        *@
+
+
+<form action="#" method="post">
+    <p>category adı: </p>
+    <input type="text" class="form-control" name="CategoryName" />
+
+    @Html.ValidationMessageFor(x => x.CategoryName, "", new { @style = "color:red" }) @*bu alan verilen uyarı mesajı için*@
+
+
+
+
+
+    <p>category desc: </p>
+    <input type="text" class="form-control" name="CategoryDescription" />
+
+
+    <button type="submit" class=" btn btn-primary">kaydet</button>
+</form>
+
+
+
+</div>

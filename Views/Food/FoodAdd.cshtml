@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "food ekle";
+    Layout = "_Layout";
+}
+@model CoreAndFood.Data.Models.Food
+
+
+
+    <div>
+
+        <h2>food add page</h2>
+
+        <form action="#" method="post">
+
+            <p>adı: </p>
+            <input type="text" class="form-control" name="FoodName" required />
+
+
+            <p> stock: </p>
+            <input type="text" class="form-control" name="Stock" required />
+
+            <p>  price: </p>
+            <input type="text" class="form-control" name="Price" required />
+
+            <p> image url: </p>
+            <input type="text" class="form-control" name="ImageURL" required />
+
+            <p>category: </p>
+            @Html.DropDownListFor(x=>x.CategoryId, (List<SelectListItem>)ViewBag.listicerik  ,new {@class="form-control" })
+
+            <p>description: </p>
+            <textarea  name="Desc" rows="10" cols="100"> </textarea>
+            <br />
+
+
+            <button type="submit" class=" btn btn-primary">kaydet</button>
+        </form>
+
+
+    </div>
