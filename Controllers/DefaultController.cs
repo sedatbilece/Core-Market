@@ -11,6 +11,9 @@ namespace CoreAndFood.Controllers
     [AllowAnonymous]// bu controller authonticationdan muaf  vitrin tarafı
     public class DefaultController : Controller
     {
+
+
+       
         public IActionResult Index()
         {
             return View();
